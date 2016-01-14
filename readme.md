@@ -1,6 +1,6 @@
 # TCP Chat
 
-OTP application with ranch
+Simple chat (OTP application using Ranch)
 
 ### compile
 ```bash
@@ -9,12 +9,7 @@ rebar compile
 ```
 ### run
 ```bash
-erl -pa deps/ranch/ebin apps/ebin
-```
-in then in a shell:
-```erlang
-application:start(ranch).
-application:start(chat).
+erl -sname chat -pa ./deps/ranch/ebin -pa ./ebin -eval "application:ensure_all_started(chat)"
 ```
 ### use
 |command|use|
